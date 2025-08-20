@@ -8,9 +8,6 @@ yarn-error.log*
 pnpm-debug.log*
 *.log
 
-# generated CSS
-main.css
-
 # env files for later
 .env
 .env.local
