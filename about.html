@@ -3,9 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hanna Choi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css" />
+    <!-- This one is for the icons (hamburger menu, sun, moon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
+    <header class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm backdrop-blur-md transition-colors duration-300">
+        <nav class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 w-full">
+                <!-- desktop navbar -->
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li>
+                            <a href="index.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Work</a>
+                        </li>
+                        <li>
+                            <a href="play.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Play</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">About Me</a>
+                        </li>
+                        <li>
+                            <a href="resume.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Resume</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--this is a placeholder for a logo/brand for the future-->
+                <!-- <div class="flex justify-center">
+                    <span class="text-xl font-bold text-gray-900 dark:text-gray-50 transition-colors duration-300">Hi</span>
+                </div> -->
+
+                <!-- toggle switch for dark mode -->
+                <div>
+                    <button id="theme-toggle" class="relative cursor-pointer w-16 h-8 bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 dark:from-slate-600 dark:via-slate-700 dark:to-slate-800 rounded-full p-1 transition-all duration-500 ease-in-out shadow-inner hover:shadow-lg">
+                        <div class="toggle-circle absolute top-1 left-1 dark:left-9 w-6 h-6 bg-gray-50 dark:bg-slate-200 rounded-full shadow-md transform transition-all duration-500 ease-in-out flex items-center justify-center">
+                            <i id="theme-icon" class="fa-solid fa-sun text-xs text-amber-500 dark:text-slate-600 transition-all duration-400"></i>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- mobile navbar button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-100 focus:outline-none focus:text-violet-400 duration-200">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- mobile navbar -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="px-2 pt-2 pb-3 space-y-1 text-center">
+                    <li>
+                        <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Work</a>
+                    </li>
+                    <li>
+                        <a href="play.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Play</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
+                    </li>
+                    <li>
+                        <a href="resume.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
+            <div class="flex-shrink-0 w-64 h-80 md:w-104 md:h-130 overflow-hidden shadow-2xl transition-all duration-300">
+                <!-- decided on an oval-shaped profile icon here, feel free to change it in the future -->
+                <img src="src/img/aboutPhoto.JPG" alt="profile photo" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <h3 class="max-w-2xl text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200 leading-relaxed mb-4 transition-colors duration-300">Hey there! I'm Hanna.</h3>
+
+                <p class="max-w-2xl text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-4 transition-colors duration-300">I'm a computer science student at CU Boulder with a passion for building tech that's practical, creative, and people-focused.</p>
+                <p class="max-w-2xl text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-4 transition-colors duration-300">I've had the chance to explore engineering from a few different angles: leading a NASA Space Grant team on wearable technology, diggining into sustainable design through a Department of Energy competition, and coaching community members through tech troubleshooting at my local library.</p>
+                <p class="max-w-2xl text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-4 transition-colors duration-300">Along the way, I've learned how much I enjoy tackling problems and making technology more accessible.</p>
+                <p class="max-w-2xl text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-2 transition-colors duration-300">In my spare time, you'll often find me playing tabletop RPG campaigns, reading, or tinkering with a side project.</p>
+
+                <!-- social media/links to contact -->
+                <div class="flex justify-center md:justify-start space-x-6 pt-6">
+                    <a href="https://github.com/choihann" class="group p-3 bg-gray-100 dark:bg-gray-700 hover:bg-violet-100 dark:hover:bg-violet-900/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <i class="fa-brands fa-github text-xl text-gray-600 dark:text-gray-100 group-hover:text-neutral-900 dark:group-hover:text-neutral-700 transition-colors duration-200"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/choihanna" class="group p-3 bg-gray-100 dark:bg-gray-700 hover:bg-violet-100 dark:hover:bg-violet-900/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <i class="fa-brands fa-linkedin text-xl text-gray-600 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200"></i>
+                    </a>
+                    <a href="mailto:choihan006@gmail.com" class="group p-3 bg-gray-100 dark:bg-gray-700 hover:bg-violet-100 dark:hover:bg-violet-900/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <i class="fa-solid fa-envelope text-xl text-gray-600 dark:text-gray-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-200"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
+    <footer class="text-gray-700 dark:text-gray-100 text-center py-4 mt-10">
+        <p class="text-sm">
+          &copy; <span id="year"></span> Hanna Choi. All rights reserved.
+        </p>
+      </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

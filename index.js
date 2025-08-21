@@ -72,3 +72,6 @@ themeToggle.addEventListener('click', function() {
         }, 200);
     }
 });
+
+// auto updating the year for the copyright
+document.getElementById("year").textContent = new Date().getFullYear();

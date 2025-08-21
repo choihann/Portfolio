@@ -13,30 +13,30 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* this is for the scrolling banner */
-@keyframes curvedScroll {
+@keyframes textWave {
     0% {
-        transform: translateX(0) translateY(0px);
+        transform: translateX(0%) translateY(0px);
     }
     12.5% {
-        transform: translateX(-12.5%) translateY(-8px);
+        transform: translateX(-12.5%) translateY(-15px);
     }
     25% {
-        transform: translateX(-25%) translateY(0px);
+        transform: translateX(-25%) translateY(8px);
     }
     37.5% {
-        transform: translateX(-37.5%) translateY(12px);
+        transform: translateX(-37.5%) translateY(-12px);
     }
     50% {
-        transform: translateX(-50%) translateY(0px);
+        transform: translateX(-50%) translateY(6px);
     }
     62.5% {
         transform: translateX(-62.5%) translateY(-10px);
     }
     75% {
-        transform: translateX(-75%) translateY(0px);
+        transform: translateX(-75%) translateY(4px);
     }
     87.5% {
-        transform: translateX(-87.5%) translateY(6px);
+        transform: translateX(-87.5%) translateY(-6px);
     }
     100% {
         transform: translateX(-100%) translateY(0px);
@@ -44,6 +44,7 @@
 }
 
 .scroll-animation {
-    animation: curvedScroll 60s linear infinite;
+    animation: textWave 60s linear infinite;
     display: flex;
+    width: 200%;
 }

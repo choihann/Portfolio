@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PORTFOLIO</title>
+    <title>Hanna Choi</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,23 +14,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-    <header class="sticky top-0 bg-gray-50 dark:bg-gray-900 shadow-sm backdrop-blur-md transition-colors duration-300">
+    <header class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm backdrop-blur-md transition-colors duration-300">
         <nav class="mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 w-full">
                 <!-- desktop navbar -->
                 <div class="hidden md:block">
                     <ul class="flex space-x-8">
                         <li>
-                            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Work</a>
+                            <a href="#work" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Work</a>
                         </li>
                         <li>
-                            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Play</a>
+                            <a href="play.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Play</a>
                         </li>
                         <li>
-                            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">About Me</a>
+                            <a href="about.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">About Me</a>
                         </li>
                         <li>
-                            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Resume</a>
+                            <a href="resume.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Resume</a>
                         </li>
                     </ul>
                 </div>
@@ -64,13 +64,13 @@
                         <a href="#work" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Work</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Play</a>
+                        <a href="play.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Play</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
+                        <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Resume</a>
+                        <a href="resume.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Resume</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +79,7 @@
 
     <section class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
-            <div class="flex-shrink-0 -64 h-80 md:w-72 md:h-90 rounded-full overflow-hidden shadow-2xl transition-all duration-300">
+            <div class="flex-shrink-0 w-64 h-80 md:w-72 md:h-90 rounded-full overflow-hidden shadow-2xl transition-all duration-300">
                 <!-- decided on an oval-shaped profile icon here, feel free to change it in the future -->
                 <img src="src/img/profilePhoto.JPG" alt="profile photo" class="w-full h-full object-cover object-center">
             </div>
@@ -95,7 +95,7 @@
                 <p class="max-w-2xl text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">I write code to turn ideas into reality. I am a CU Boulder student with a passion for finding creative solutions and learning about new technologies.</p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-6">
-                    <button onclick="location.href='/about.html'" class="group cursor-pointer px-8 py-4 bg-radial from-violet-600 to-violet-400 text-gray-100 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:animate-pulse">
+                    <button onclick="location.href='about.html'" class="group cursor-pointer px-8 py-4 bg-radial from-violet-600 to-violet-400 text-gray-100 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:animate-pulse">
                         <span class="flex items-center justify-center">
                             About Me
                         </span>
@@ -128,6 +128,10 @@
 
     <div id="work" class="relative overflow-hidden bg-gray-100 dark:bg-gray-950 py-4 transition-colors duration-300">
         <div class="scroll-animation">
+            <!-- I duplicated this multiple times because of the loop being the most seamless this way -->
+            <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
+                MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
+            </div>
             <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
                 MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
             </div>
@@ -141,6 +145,39 @@
         <!-- right side fade -->
         <div class="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
     </div>
+
+    <section class="py-8 max-w-7xl mx-auto">
+        <div class="bg-gray-100/80 dark:bg-gray-800/50 rounded-2xl p-4 transition-colors duration-300">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2">
+                    <img src="/src/img/Wearables.png" 
+                            alt="wearables logo" 
+                            class="w-1/2 h-full object-cover rounded-xl">
+                </div>
+                <div class="lg:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-100">NASA Colorado Space Grant Consortium</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
+                        A wearable prototype designed to explore how gesture recognition and light output can assist users in low-light environments. Built as a part of my role as Wearables Engineering Team Lead with the NASA Colorado Space Grant Consortium, this project combines hardware design and embedded programing to create a proof-of-concept. The result was a functional glove that demonstrates the potential of gesture-controlled wearables for accessibility and safety applications.
+                    </p>
+                    <!-- <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 rounded-full text-sm transition-colors duration-300">C++</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded-full text-sm transition-colors duration-300">Arduino</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-300 rounded-full text-sm transition-colors duration-300">Hardware</span>
+                    </div> -->
+                    <a href="https://drive.google.com/drive/folders/10Wci6HjUsv_im9m0DION6SgwWzEsmfO0?usp=sharing" target="_blank" class="text-purple-600 dark:text-purple-400 hover:text-purple-500 dark:hover:text-purple-300 font-medium inline-flex items-center space-x-2 transition-colors duration-300">
+                        <span>View Project</span>
+                        <i class="fa-solid fa-external-link mr-2 transition-all duration-200"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-gray-700 dark:text-gray-100 text-center py-4 mt-10">
+        <p class="text-sm">
+          &copy; <span id="year"></span> Hanna Choi. All rights reserved.
+        </p>
+      </footer>
 
     <script src="index.js"></script>
 </body>

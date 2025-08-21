@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanna Choi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css" />
+    <!-- This one is for the icons (hamburger menu, sun, moon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
+    <header class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm backdrop-blur-md transition-colors duration-300">
+        <nav class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 w-full">
+                <!-- desktop navbar -->
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li>
+                            <a href="index.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Work</a>
+                        </li>
+                        <li>
+                            <a href="play.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Play</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">About Me</a>
+                        </li>
+                        <li>
+                            <a href="resume.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Resume</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--this is a placeholder for a logo/brand for the future-->
+                <!-- <div class="flex justify-center">
+                    <span class="text-xl font-bold text-gray-900 dark:text-gray-50 transition-colors duration-300">Hi</span>
+                </div> -->
+
+                <!-- toggle switch for dark mode -->
+                <div>
+                    <button id="theme-toggle" class="relative cursor-pointer w-16 h-8 bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 dark:from-slate-600 dark:via-slate-700 dark:to-slate-800 rounded-full p-1 transition-all duration-500 ease-in-out shadow-inner hover:shadow-lg">
+                        <div class="toggle-circle absolute top-1 left-1 dark:left-9 w-6 h-6 bg-gray-50 dark:bg-slate-200 rounded-full shadow-md transform transition-all duration-500 ease-in-out flex items-center justify-center">
+                            <i id="theme-icon" class="fa-solid fa-sun text-xs text-amber-500 dark:text-slate-600 transition-all duration-400"></i>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- mobile navbar button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-100 focus:outline-none focus:text-violet-400 duration-200">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- mobile navbar -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="px-2 pt-2 pb-3 space-y-1 text-center">
+                    <li>
+                        <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Work</a>
+                    </li>
+                    <li>
+                        <a href="play.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Play</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
+                    </li>
+                    <li>
+                        <a href="resume.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="scroll-animation mt-8">
+        <!-- I duplicated this multiple times because of the loop being the most seamless this way -->
+        <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
+            SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
+        </div>
+        <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
+            SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
+        </div>
+        <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
+            SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
+        </div>
+    </div>
+    
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300">
+                <div class="overflow-hidden">
+                    <img src="src/img/TechVolunteer.jpg">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                        Volunteering
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">
+                        Volunteering at the library as tech help meant being able to troubleshoot diverse issues. The variety kept things interesting and pushed me to think on my feet. I also ran small workshops where we broke down everyday tools into simple steps, creating a space where people could ask questions without pressure. What I enjoyed most was seeing how small bits of troubleshooting could open doors for people and make technology feel more approachable.
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300">
+                <div class="overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-violet-400 to-blue-600">Placeholder till I get an img</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                        Unity Projects
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">
+                        A compelling description.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="flex-1 text-center py-2 px-4 bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-300">
+                            View
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    
+    <footer class="text-gray-700 dark:text-gray-100 text-center py-4 mt-10">
+        <p class="text-sm">
+          &copy; <span id="year"></span> Hanna Choi. All rights reserved.
+        </p>
+      </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
