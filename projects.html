@@ -24,7 +24,7 @@
                             <a href="index.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Work</a>
                         </li>
                         <li>
-                            <a href="play.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Play</a>
+                            <a href="projects.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Projects</a>
                         </li>
                         <li>
                             <a href="about.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">About Me</a>
@@ -64,7 +64,7 @@
                         <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Work</a>
                     </li>
                     <li>
-                        <a href="play.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Play</a>
+                        <a href="projects.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Projects</a>
                     </li>
                     <li>
                         <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
@@ -77,17 +77,22 @@
         </nav>
     </header>
 
-    <div class="scroll-animation mt-8">
-        <!-- I duplicated this multiple times because of the loop being the most seamless this way -->
-        <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
-            SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
+    <div id="work" class="relative overflow-hidden bg-gray-100 dark:bg-gray-950 py-8 transition-colors duration-300">
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
+                    SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
+                </div>
+                <!-- duplicate of above for more seamless transition -->
+                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
+                    SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
+                </div>
+            </div>
         </div>
-        <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
-            SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
-        </div>
-        <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
-            SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
-        </div>
+        <!-- left side fade -->
+        <div class="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
+        <!-- right side fade -->
+        <div class="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
     </div>
     
     <section class="py-16 px-6 max-w-7xl mx-auto">

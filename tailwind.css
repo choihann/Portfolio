@@ -13,38 +13,37 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* this is for the scrolling banner */
-@keyframes textWave {
+@keyframes scroll {
     0% {
-        transform: translateX(0%) translateY(0px);
-    }
-    12.5% {
-        transform: translateX(-12.5%) translateY(-15px);
-    }
-    25% {
-        transform: translateX(-25%) translateY(8px);
-    }
-    37.5% {
-        transform: translateX(-37.5%) translateY(-12px);
-    }
-    50% {
-        transform: translateX(-50%) translateY(6px);
-    }
-    62.5% {
-        transform: translateX(-62.5%) translateY(-10px);
-    }
-    75% {
-        transform: translateX(-75%) translateY(4px);
-    }
-    87.5% {
-        transform: translateX(-87.5%) translateY(-6px);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%) translateY(0px);
+        transform: translateX(-50%);
     }
 }
 
-.scroll-animation {
-    animation: textWave 60s linear infinite;
-    display: flex;
-    width: 200%;
+.scroll-container {
+    overflow: hidden;
+    width: 100%;
 }
+
+.scroll-content {
+    display: flex;
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+}
+
+.scroll-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* hide scrollbar for a cleaner look */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

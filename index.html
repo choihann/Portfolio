@@ -13,7 +13,7 @@
     <!-- This one is for the icons (hamburger menu, sun, moon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
+<body class="bg-gray-100 dark:bg-gray-950 transition-colors duration-300 overflow-auto scrollbar-hide">
     <header class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm backdrop-blur-md transition-colors duration-300">
         <nav class="mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 w-full">
@@ -24,7 +24,7 @@
                             <a href="#work" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Work</a>
                         </li>
                         <li>
-                            <a href="play.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Play</a>
+                            <a href="projects.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Projects</a>
                         </li>
                         <li>
                             <a href="about.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">About Me</a>
@@ -64,7 +64,7 @@
                         <a href="#work" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Work</a>
                     </li>
                     <li>
-                        <a href="play.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Play</a>
+                        <a href="projects.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Projects</a>
                     </li>
                     <li>
                         <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
@@ -127,19 +127,17 @@
     </section>
 
     <div id="work" class="relative overflow-hidden bg-gray-100 dark:bg-gray-950 py-4 transition-colors duration-300">
-        <div class="scroll-animation">
-            <!-- I duplicated this multiple times because of the loop being the most seamless this way -->
-            <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
-                MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
-            </div>
-            <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
-                MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
-            </div>
-            <div class="text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50 whitespace-nowrap flex-shrink-0">
-                MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
+                    MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
+                </div>
+                <!-- duplicate of above for more seamless transition -->
+                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
+                    MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
+                </div>
             </div>
         </div>
-
         <!-- left side fade -->
         <div class="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
         <!-- right side fade -->
@@ -199,7 +197,7 @@
             <div class="lg:w-1/2 flex flex-col justify-center">
                 <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-100">This Porfolio Website</h3>
                 <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
-                    I built this website as both a portfolio and a personal brand hub. It organizes my professional work and personal story into an easy-to-navigate interface. The goal was to create a platform that presents my projects and reflects who I am beyond my technical skills. It's a digital snapshot of me: what I build, what I enjoy, and where I'm heading.
+                    I built this website as a portfolio. It organizes my professional work and personal story into an easy-to-navigate interface. The goal was to create a platform that presents my projects and reflects who I am beyond my technical skills. It's a digital snapshot of me: what I build, what I enjoy, and where I'm heading.
                 </p>
 
                 <a href="https://choihann.github.io/Portfolio/" target="_blank" class="text-purple-600 dark:text-purple-400 hover:text-purple-500 dark:hover:text-purple-300 font-medium inline-flex items-center space-x-2 transition-colors duration-300">
