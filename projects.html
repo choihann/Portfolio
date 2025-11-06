@@ -7,166 +7,110 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="main.css" />
     <!-- This one is for the icons (hamburger menu, sun, moon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-    <header class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm backdrop-blur-md transition-colors duration-300">
-        <nav class="mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 w-full">
-                <!-- desktop navbar -->
-                <div class="hidden md:block">
-                    <ul class="flex space-x-8">
-                        <li>
-                            <a href="index.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Work</a>
-                        </li>
-                        <li>
-                            <a href="projects.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Projects</a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">About Me</a>
-                        </li>
-                        <li>
-                            <a href="resume.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Resume</a>
-                        </li>
-                    </ul>
-                </div>
+<body class="bg-gray-100 dark:bg-[#0a0a0a] text-black dark:text-white font-sans">
+    <header class="border-b-4 border-black dark:border-yellow-600 bg-white dark:bg-[#0a0a0a] sticky top-0 z-50">
+        <nav class="max-w-[1400px] mx-auto px-8 py-6">
+            <!-- navbar for desktop view -->
+            <div class="flex justify-between items-center w-full">
+                <ul class="hidden md:flex gap-8 list-none">
+                    <li><a href="index.html#work" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">Work</a></li>
+                    <li><a href="projects.html" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">Projects</a></li>
+                    <li><a href="about.html" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">About Me</a></li>
+                    <li><a href="resume.html" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">Resume</a></li>
+                </ul>
 
-                <!--this is a placeholder for a logo/brand for the future-->
-                <!-- <div class="flex justify-center">
-                    <span class="text-xl font-bold text-gray-900 dark:text-gray-50 transition-colors duration-300">Hi</span>
-                </div> -->
+                <button id="theme-toggle" class="w-[60px] h-8 border-[3px] border-black dark:border-yellow-600 bg-white dark:bg-yellow-600 cursor-pointer relative transition-all">
+                    <div class="toggle-circle w-[22px] h-[22px] bg-black dark:bg-white absolute top-[2px] left-[2px] dark:left-8 flex items-center justify-center transition-all duration-300">
+                        <i id="theme-icon" class="fa-solid fa-sun text-xs text-white dark:text-black"></i>
+                    </div>
+                </button>
 
-                <!-- toggle switch for dark mode -->
-                <div>
-                    <button id="theme-toggle" class="relative cursor-pointer w-16 h-8 bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 dark:from-slate-600 dark:via-slate-700 dark:to-slate-800 rounded-full p-1 transition-all duration-500 ease-in-out shadow-inner hover:shadow-lg">
-                        <div class="toggle-circle absolute top-1 left-1 dark:left-9 w-6 h-6 bg-gray-50 dark:bg-slate-200 rounded-full shadow-md transform transition-all duration-500 ease-in-out flex items-center justify-center">
-                            <i id="theme-icon" class="fa-solid fa-sun text-xs text-amber-500 dark:text-slate-600 transition-all duration-400"></i>
-                        </div>
-                    </button>
-                </div>
-
-                <!-- mobile navbar button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-100 focus:outline-none focus:text-violet-400 duration-200">
-                        <i class="fa-solid fa-bars fa-lg"></i>
-                    </button>
-                </div>
+                <button id="mobile-menu-button" class="md:hidden bg-yellow-600 border-[3px] border-black dark:border-white px-4 py-2 cursor-pointer text-xl text-black dark:text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
 
-            <!-- mobile navbar -->
-            <div id="mobile-menu" class="hidden md:hidden">
-                <ul class="px-2 pt-2 pb-3 space-y-1 text-center">
-                    <li>
-                        <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Work</a>
-                    </li>
-                    <li>
-                        <a href="projects.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Projects</a>
-                    </li>
-                    <li>
-                        <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
-                    </li>
-                    <li>
-                        <a href="resume.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Resume</a>
-                    </li>
+            <!-- mobile nevbar -->
+            <div id="mobile-menu" class="hidden">
+                <ul class="list-none py-4">
+                    <li><a href="index.html#work" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">Work</a></li>
+                    <li><a href="projects.html" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">Projects</a></li>
+                    <li><a href="about.html" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">About Me</a></li>
+                    <li><a href="resume.html" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">Resume</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div id="work" class="relative overflow-hidden bg-gray-100 dark:bg-gray-950 py-8 transition-colors duration-300">
-        <div class="scroll-container">
-            <div class="scroll-content">
-                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
-                    SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
-                </div>
-                <!-- duplicate of above for more seamless transition -->
-                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
-                    SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
-                </div>
+    <div class="bg-black dark:bg-yellow-600 text-white py-8 overflow-hidden border-t-4 border-b-4 border-yellow-600 dark:border-white my-8">
+        <div class="scroll-content">
+            <div class="scroll-item text-3xl md:text-4xl font-bold">
+                SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
+            </div>
+            <div class="scroll-item text-3xl md:text-4xl font-bold">
+                SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS • SIDE QUESTS •&nbsp;
             </div>
         </div>
-        <!-- left side fade -->
-        <div class="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
-        <!-- right side fade -->
-        <div class="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
     </div>
-    
-    <section class="py-16 px-6 max-w-7xl mx-auto">
+
+    <section class="max-w-[1400px] mx-auto px-8 pb-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300">
-                <div class="overflow-hidden">
-                    <img src="src/img/TechVolunteer.jpg" alt ="Photo from Tech Volunteering Site">
+            <!-- Volunteering Card -->
+            <div class="border-[5px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] overflow-hidden shadow-brutal-lg dark:shadow-brutal-yellow-lg">
+                <div class="border-b-[5px] border-black dark:border-yellow-600 overflow-hidden">
+                    <img src="src/img/TechVolunteer.jpg" alt="Photo from Tech Volunteering Site" class="w-full h-48 object-cover">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                    <h3 class="text-2xl font-bold uppercase mb-3 text-yellow-600 dark:text-white">
                         Volunteering
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">
+                    <p class="text-base leading-relaxed mb-4">
                         Volunteering at the library as tech help meant being able to troubleshoot diverse issues. The variety kept things interesting and pushed me to think on my feet. I also ran small workshops where we broke down everyday tools into simple steps, creating a space where people could ask questions without pressure. What I enjoyed most was seeing how small bits of troubleshooting could open doors for people and make technology feel more approachable.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300">
-                <div class="overflow-hidden">
-                    <img src="src/img/solarDecathlonPhoto.png" alt = "Solar Decathlon Design Challenge Poster">
+            <!-- Solar Decathlon Card -->
+            <div class="border-[5px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] overflow-hidden shadow-brutal-lg dark:shadow-brutal-yellow-lg">
+                <div class="border-b-[5px] border-black dark:border-yellow-600 overflow-hidden">
+                    <img src="src/img/solarDecathlonPhoto.png" alt="Solar Decathlon Design Challenge Poster" class="w-full h-48 object-cover">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                    <h3 class="text-2xl font-bold uppercase mb-3 text-yellow-600 dark:text-white">
                         CU Boulder Solar Decathlon
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">
+                    <p class="text-base leading-relaxed mb-4">
                         Collaborative design project focused on creating a net-zero energy multifamily housing prototype. Developed using Rhino and Grasshopper. Integrated passive design strategies, renewable energy systems, and performance simulations to optimize sustainability, occupant comfort, and efficiency while looking to meet Solar Decathlon competition criteria.
                     </p>
-
-                    <div class="flex gap-3">
-                        <a href="https://drive.google.com/drive/folders/1BfBunMqp8snmStHn-kOfDm9hGIsFwBNW?usp=drive_link" target = "_blank" class="flex-1 text-center py-2 px-4 bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-300">
-                            View
-                        </a>
-                    </div>
+                    <a href="https://drive.google.com/drive/folders/1BfBunMqp8snmStHn-kOfDm9hGIsFwBNW?usp=drive_link" target="_blank" class="inline-flex items-center justify-center w-full py-3 px-4 bg-yellow-600 text-white border-[3px] border-black dark:border-white font-bold uppercase transition-all shadow-brutal dark:shadow-brutal-yellow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none no-underline">
+                        View
+                    </a>
                 </div>
             </div>
 
-            <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300">
-                <div class="overflow-hidden">
-                    <img src="src/img/fileSimPhoto.png" alt ="File System Sim Screenshot">
+            <!-- File System Simulator Card -->
+            <div class="border-[5px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] overflow-hidden shadow-brutal-lg dark:shadow-brutal-yellow-lg">
+                <div class="border-b-[5px] border-black dark:border-yellow-600 overflow-hidden">
+                    <img src="src/img/fileSimPhoto.png" alt="File System Sim Screenshot" class="w-full h-48 object-cover">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                    <h3 class="text-2xl font-bold uppercase mb-3 text-yellow-600 dark:text-white">
                         File System Simulator
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">
+                    <p class="text-base leading-relaxed mb-4">
                         This project is a command-line simulation environment that mimics a simplified Unix-like system. It allows users to navigate directories, manipulate files, and run basic commands directly from the terminal, without requiring a real Unix setup. The goal was to create an educational tool for beginners to experiment safely with Unix commands, build muscle memory, and understand how a command-line environment works.
                     </p>
-
-                    <div class="flex gap-3">
-                        <a href="https://drive.google.com/file/d/1j3RbIWIAtLVRwvLHpUHOxVHk7XblCtHG/view?usp=drive_link" target = "_blank" class="flex-1 text-center py-2 px-4 bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-300">
-                            View
-                        </a>
+                    <a href="https://drive.google.com/file/d/1j3RbIWIAtLVRwvLHpUHOxVHk7XblCtHG/view?usp=drive_link" target="_blank" class="inline-flex items-center justify-center w-full py-3 px-4 bg-yellow-600 text-white border-[3px] border-black dark:border-white font-bold uppercase transition-all shadow-brutal dark:shadow-brutal-yellow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none no-underline">
+                        View
+                    </a>
                 </div>
             </div>
-            <!-- <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300">
-                <div class="overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-violet-400 to-blue-600">Placeholder till I get an img</div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
-                        Unity Projects
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">
-                        A compelling description.
-                    </p>
-                    <div class="flex gap-3">
-                        <a href="#" class="flex-1 text-center py-2 px-4 bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-300">
-                            View
-                        </a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
     

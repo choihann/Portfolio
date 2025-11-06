@@ -7,212 +7,143 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="main.css" />
-    <!-- This one is for the icons (hamburger menu, sun, moon) -->
+    <!-- This one is for the icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-100 dark:bg-gray-950 transition-colors duration-300 overflow-auto scrollbar-hide">
-    <header class="sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 shadow-sm backdrop-blur-md transition-colors duration-300">
-        <nav class="mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 w-full">
-                <!-- desktop navbar -->
-                <div class="hidden md:block">
-                    <ul class="flex space-x-8">
-                        <li>
-                            <a href="#work" class="text-gray-700 dark:text-gray-100 hover:text-violet-400 underline underline-offset-4">Work</a>
-                        </li>
-                        <li>
-                            <a href="projects.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Projects</a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">About Me</a>
-                        </li>
-                        <li>
-                            <a href="resume.html" class="text-gray-700 dark:text-gray-100 hover:text-violet-400">Resume</a>
-                        </li>
-                    </ul>
-                </div>
+<body class="bg-gray-100 dark:bg-[#0a0a0a] text-black dark:text-white font-sans">
+    <header class="border-b-4 border-black dark:border-yellow-600 bg-white dark:bg-[#0a0a0a] sticky top-0 z-50">
+        <nav class="max-w-[1400px] mx-auto px-8 py-6">
+            <!-- navbar for desktop view -->
+            <div class="flex justify-between items-center w-full">
+                <ul class="hidden md:flex gap-8 list-none">
+                    <li><a href="#work" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">Work</a></li>
+                    <li><a href="projects.html" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">Projects</a></li>
+                    <li><a href="about.html" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">About Me</a></li>
+                    <li><a href="resume.html" class="text-black dark:text-white font-bold text-lg uppercase no-underline border-b-[3px] border-transparent hover:border-yellow-600 transition-all">Resume</a></li>
+                </ul>
 
-                <!--this is a placeholder for a logo/brand for the future-->
-                <!-- <div class="flex justify-center">
-                    <span class="text-xl font-bold text-gray-900 dark:text-gray-50 transition-colors duration-300">Hi</span>
-                </div> -->
+                <button id="theme-toggle" class="w-[60px] h-8 border-[3px] border-black dark:border-yellow-600 bg-white dark:bg-yellow-600 cursor-pointer relative transition-all">
+                    <div class="toggle-circle w-[22px] h-[22px] bg-black dark:bg-white absolute top-[2px] left-[2px] dark:left-8 flex items-center justify-center transition-all duration-300">
+                        <i id="theme-icon" class="fa-solid fa-sun text-xs text-white dark:text-black"></i>
+                    </div>
+                </button>
 
-                <!-- toggle switch for dark mode -->
-                <div>
-                    <button id="theme-toggle" class="relative cursor-pointer w-16 h-8 bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 dark:from-slate-600 dark:via-slate-700 dark:to-slate-800 rounded-full p-1 transition-all duration-500 ease-in-out shadow-inner hover:shadow-lg">
-                        <div class="toggle-circle absolute top-1 left-1 dark:left-9 w-6 h-6 bg-gray-50 dark:bg-slate-200 rounded-full shadow-md transform transition-all duration-500 ease-in-out flex items-center justify-center">
-                            <i id="theme-icon" class="fa-solid fa-sun text-xs text-amber-500 dark:text-slate-600 transition-all duration-400"></i>
-                        </div>
-                    </button>
-                </div>
-
-                <!-- mobile navbar button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-100 focus:outline-none focus:text-violet-400 duration-200">
-                        <i class="fa-solid fa-bars fa-lg"></i>
-                    </button>
-                </div>
+                <button id="mobile-menu-button" class="md:hidden bg-yellow-600 border-[3px] border-black dark:border-white px-4 py-2 cursor-pointer text-xl text-black dark:text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
 
-            <!-- mobile navbar -->
-            <div id="mobile-menu" class="hidden md:hidden">
-                <ul class="px-2 pt-2 pb-3 space-y-1 text-center">
-                    <li>
-                        <a href="#work" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Work</a>
-                    </li>
-                    <li>
-                        <a href="projects.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Projects</a>
-                    </li>
-                    <li>
-                        <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">About Me</a>
-                    </li>
-                    <li>
-                        <a href="resume.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200">Resume</a>
-                    </li>
+            <!-- mobile nevbar -->
+            <div id="mobile-menu" class="hidden">
+                <ul class="list-none py-4">
+                    <li><a href="#work" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">Work</a></li>
+                    <li><a href="projects.html" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">Projects</a></li>
+                    <li><a href="about.html" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">About Me</a></li>
+                    <li><a href="resume.html" class="block p-4 no-underline text-black dark:text-white font-bold uppercase border-[3px] border-black dark:border-yellow-600 my-2 bg-white dark:bg-[#1a1a1a] hover:bg-yellow-600 hover:text-white transition-all">Resume</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
-            <div class="flex-shrink-0 w-64 h-80 md:w-72 md:h-90 rounded-full overflow-hidden shadow-2xl transition-all duration-300">
-                <!-- decided on an oval-shaped profile icon here, feel free to change it in the future -->
-                <img src="src/img/profilePhoto.JPG" alt="profile photo" class="w-full h-full object-cover object-center">
+    <section class="max-w-[1400px] mx-auto my-16 px-8 grid md:grid-cols-[1fr_2fr] gap-16 items-center">
+        <div class="border-[4px] border-black dark:border-yellow-600 bg-yellow-600 relative">
+            <img src="src/img/profilePhoto.JPG" alt="profile photo" class="block w-full h-auto">
+        </div>
+        <div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-none mb-4 uppercase">Hey! I'm <span class="text-yellow-600">Hanna</span>.</h1>
+            <div class="text-2xl font-bold mb-8">
+                BS Computer Science • Minor in Business
             </div>
-            <div class="flex-1 text-center md:text-left py-6">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-300">Hey! I'm Hanna.</h1>
+            <p class="text-2xl leading-relaxed mb-8">I like tinkering with code! I am a CU Boulder student with a passion for finding creative solutions and learning about new technologies.</p>
+            
+            <div class="flex flex-wrap gap-4">
+                <a href="about.html" class="px-8 py-4 text-lg font-bold uppercase border-4 border-yellow-600 cursor-pointer no-underline inline-block transition-all bg-yellow-600 text-white shadow-brutal dark:shadow-brutal-yellow hover:translate-x-1 hover:translate-y-1 hover:shadow-none">About Me</a>
+                <a href="src/HannaResume.pdf" download="Hanna Choi Resume" class="px-8 py-4 text-lg font-bold uppercase border-4 border-black dark:border-yellow-600 cursor-pointer no-underline inline-block transition-all bg-white dark:bg-[#0a0a0a] text-black dark:text-white shadow-brutal dark:shadow-brutal-yellow hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:bg-yellow-600 hover:text-white">
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+            </div>
 
-                <div class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
-                    <span class="inline-block">Bachelor of Science in Computer Science</span>
-                    <span class="mx-2 text-violet-500">•</span>
-                    <span class="inline-block">Minor in Business</span>
-                </div>
-
-                <p class="max-w-2xl text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">I like tinkering with code! I am a CU Boulder student with a passion for finding creative solutions and learning about new technologies.</p>
-
-                <div class="flex flex-col sm:flex-row gap-4 pt-6">
-                    <button onclick="location.href='about.html'" class="group cursor-pointer px-8 py-4 bg-violet-500 text-gray-100 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:animate-pulse">
-                        <span class="flex items-center justify-center">
-                            About Me
-                        </span>
-                    </button>
-                    <a href="src/HannaResume.pdf" download="Hanna Choi Resume">
-                        <button class="group cursor-pointer px-8 py-4 bg-transparent border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold rounded-full transition-all duration-300">
-                            <span class="inline-flex items-center justify-center">
-                                <i class="fa-solid fa-download mr-2 transition-all duration-200 group-hover:animate-bounce"></i>
-                                Download Resume
-                            </span>
-                        </button> 
-                    </a>
-                </div>
-
-                <!-- social media/links to contact -->
-                <div class="flex justify-center md:justify-start space-x-6 pt-6">
-                    <a href="https://github.com/choihann" class="group p-3 bg-gray-100 dark:bg-gray-700 hover:bg-violet-100 dark:hover:bg-violet-900/30 rounded-full transition-all duration-300 hover:scale-110">
-                        <i class="fa-brands fa-github text-xl text-gray-600 dark:text-gray-100 group-hover:text-neutral-900 dark:group-hover:text-neutral-700 transition-colors duration-200"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/choihanna" class="group p-3 bg-gray-100 dark:bg-gray-700 hover:bg-violet-100 dark:hover:bg-violet-900/30 rounded-full transition-all duration-300 hover:scale-110">
-                        <i class="fa-brands fa-linkedin text-xl text-gray-600 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200"></i>
-                    </a>
-                    <a href="mailto:choihan006@gmail.com" class="group p-3 bg-gray-100 dark:bg-gray-700 hover:bg-violet-100 dark:hover:bg-violet-900/30 rounded-full transition-all duration-300 hover:scale-110">
-                        <i class="fa-solid fa-envelope text-xl text-gray-600 dark:text-gray-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-200"></i>
-                    </a>
-                </div>
+            <div class="flex gap-4 mt-8">
+                <a href="https://github.com/choihann" class="w-[50px] h-[50px] flex items-center justify-center border-[3px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] text-black dark:text-white text-2xl no-underline transition-all shadow-brutal dark:shadow-brutal-yellow hover:bg-yellow-600 hover:text-white hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/choihanna" class="w-[50px] h-[50px] flex items-center justify-center border-[3px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] text-black dark:text-white text-2xl no-underline transition-all shadow-brutal dark:shadow-brutal-yellow hover:bg-yellow-600 hover:text-white hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:choihan006@gmail.com" class="w-[50px] h-[50px] flex items-center justify-center border-[3px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] text-black dark:text-white text-2xl no-underline transition-all shadow-brutal dark:shadow-brutal-yellow hover:bg-yellow-600 hover:text-white hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <div id="work" class="relative overflow-hidden bg-gray-100 dark:bg-gray-950 py-4 transition-colors duration-300">
-        <div class="scroll-container">
-            <div class="scroll-content">
-                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
-                    MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
-                </div>
-                <!-- duplicate of above for more seamless transition -->
-                <div class="scroll-item text-xl md:text-2xl lg:text-3xl font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-50">
-                    MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
-                </div>
+    <div id="work" class="bg-black dark:bg-yellow-600 text-white py-8 overflow-hidden border-t-4 border-b-4 border-yellow-600 dark:border-white my-16">
+        <div class="scroll-content">
+            <div class="scroll-item text-3xl md:text-4xl font-bold">
+                MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
+            </div>
+            <div class="scroll-item text-3xl md:text-4xl font-bold">
+                MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK • MY WORK •&nbsp;
             </div>
         </div>
-        <!-- left side fade -->
-        <div class="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
-        <!-- right side fade -->
-        <div class="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-gray-100 to-transparent dark:from-gray-950 z-10 transition-colors duration-300"></div>
     </div>
 
-    <section class="py-8 max-w-7xl mx-auto bg-gray-100/80 dark:bg-gray-800/50 rounded-2xl p-4 transition-colors duration-300">
-        <div class="flex flex-col lg:flex-row">
-            <div class="lg:w-1/2">
-                <img src="src/img/Wearables.png" 
-                        alt="Wearables Logo" 
-                        class="w-1/2 h-full object-cover rounded-xl">
-            </div>
-            <div class="lg:w-1/2 flex flex-col justify-center">
-                <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-100">NASA Colorado Space Grant Consortium</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
-                    A wearable prototype designed to explore how gesture recognition and light output can assist users in low-light environments. Built as a part of my role as Wearables Engineering Team Lead with the NASA Colorado Space Grant Consortium, this project combines hardware design and embedded programing to create a proof-of-concept. The result was a functional glove that demonstrates the potential of gesture-controlled wearables for accessibility and safety applications.
-                </p>
-                <!-- <div class="flex flex-wrap gap-3 mb-6">
-                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 rounded-full text-sm transition-colors duration-300">C++</span>
-                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded-full text-sm transition-colors duration-300">Arduino</span>
-                    <span class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-300 rounded-full text-sm transition-colors duration-300">Hardware</span>
-                </div> -->
-                <a href="https://drive.google.com/drive/folders/10Wci6HjUsv_im9m0DION6SgwWzEsmfO0?usp=sharing" target="_blank" class="text-purple-600 dark:text-purple-400 hover:text-purple-500 dark:hover:text-purple-300 font-medium inline-flex items-center space-x-2 transition-colors duration-300">
-                    <span>View Project</span>
-                    <i class="fa-solid fa-external-link mr-2 transition-all duration-200"></i>
-                </a>
+    <section class="max-w-[1400px] mx-auto mb-16 px-8">
+        <div class="border-[5px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] mb-12 relative shadow-brutal-lg dark:shadow-brutal-yellow-lg overflow-hidden">
+            <div class="grid md:grid-cols-[300px_1fr] gap-0">
+                <div class="border-black dark:border-yellow-600 p-6 flex items-center justify-center">
+                    <img src="src/img/Wearables.png" alt="Wearables Logo" class="w-full h-auto">
+                </div>
+                <div class="p-12">
+                    <h3 class="text-3xl font-bold mb-4 uppercase text-yellow-600 dark:text-white">NASA Colorado Space Grant Consortium</h3>
+                    <p class="text-lg leading-relaxed mb-6">A wearable prototype designed to explore how gesture recognition and light output can assist users in low-light environments. Built as a part of my role as Wearables Engineering Team Lead with the NASA Colorado Space Grant Consortium, this project combines hardware design and embedded programing to create a proof-of-concept. The result was a functional glove that demonstrates the potential of gesture-controlled wearables for accessibility and safety applications.</p>
+                    <a href="https://drive.google.com/drive/folders/10Wci6HjUsv_im9m0DION6SgwWzEsmfO0?usp=sharing" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-yellow-600 text-white border-[3px] border-black dark:border-white no-underline font-bold uppercase transition-all shadow-brutal dark:shadow-brutal-yellow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">
+                        View Project <i class="fa-solid fa-external-link"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
-        
-        <div class="flex flex-col lg:flex-row pt-12">
-            <div class="lg:w-1/2">
-                <img src="src/img/FridgeFusionIcon.png" 
-                        alt="Fridge Fusion Icon" 
-                        class="w-1/2 h-full object-cover rounded-xl">
-            </div>
-            <div class="lg:w-1/2 flex flex-col justify-center">
-                <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-100">Fridge Fusion</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
-                    Fridge Fusion is a web application designed to help users quickly find recipes based on the ingredients they already have at home. By entering available ingredients, users receive recipe suggestions pulled from the Spoonacular API, which are then stored in a PostgreSQL database for faster access. Fridge Fusion saves time, reduces food waste, and makes cooking more collaborative and fun.
-                </p>
-
-                <a href="https://drive.google.com/drive/folders/10xH3vM6JyUHtSPbuqB6O-wC8FGJHdOEV?usp=drive_link" target="_blank" class="text-purple-600 dark:text-purple-400 hover:text-purple-500 dark:hover:text-purple-300 font-medium inline-flex items-center space-x-2 transition-colors duration-300">
-                    <span>View Project</span>
-                    <i class="fa-solid fa-external-link mr-2 transition-all duration-200"></i>
-                </a>
+        <div class="border-[5px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] mb-12 relative shadow-brutal-lg dark:shadow-brutal-yellow-lg overflow-hidden">
+            <div class="grid md:grid-cols-[300px_1fr] gap-0">
+                <div class="border-black dark:border-yellow-600 p-6 flex items-center justify-center">
+                    <img src="src/img/FridgeFusionIcon.png" alt="Fridge Fusion Icon" class="w-full h-auto">
+                </div>
+                <div class="p-12">
+                    <h3 class="text-3xl font-bold mb-4 uppercase text-yellow-600 dark:text-white">Fridge Fusion</h3>
+                    <p class="text-lg leading-relaxed mb-6">Fridge Fusion is a web application designed to help users quickly find recipes based on the ingredients they already have at home. By entering available ingredients, users receive recipe suggestions pulled from the Spoonacular API, which are then stored in a PostgreSQL database for faster access. Fridge Fusion saves time, reduces food waste, and makes cooking more collaborative and fun.</p>
+                    <a href="https://drive.google.com/drive/folders/10xH3vM6JyUHtSPbuqB6O-wC8FGJHdOEV?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-yellow-600 text-white border-[3px] border-black dark:border-white no-underline font-bold uppercase transition-all shadow-brutal dark:shadow-brutal-yellow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">
+                        View Project <i class="fa-solid fa-external-link"></i>
+                    </a>
+                    <a href="https://csci-3308-group-7-project-fridge-fusion.onrender.com/" target="_blank" class="inline-flex items-center mx-8 my-6 gap-2 px-6 py-3 bg-yellow-600 text-white border-[3px] border-black dark:border-white no-underline font-bold uppercase transition-all shadow-brutal dark:shadow-brutal-yellow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">
+                        Visit Site <i class="fa-solid fa-external-link"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row pt-12">
-            <div class="lg:w-1/2">
-                <img src="src/img/websiteCreationPhoto.jpg" 
-                        alt="Website" 
-                        class="w-1/2 h-full object-cover rounded-xl">
-            </div>
-            <div class="lg:w-1/2 flex flex-col justify-center">
-                <h3 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-100">This Porfolio Website</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
-                    I built this website as a portfolio. It organizes my professional work and personal story into an easy-to-navigate interface. The goal was to create a platform that presents my projects and reflects who I am beyond my technical skills. It's a digital snapshot of me: what I build, what I enjoy, and where I'm heading.
-                </p>
-
-                <a href="https://choihann.github.io/Portfolio/" target="_blank" class="text-purple-600 dark:text-purple-400 hover:text-purple-500 dark:hover:text-purple-300 font-medium inline-flex items-center space-x-2 transition-colors duration-300">
-                    <span>View Project</span>
-                    <i class="fa-solid fa-external-link mr-2 transition-all duration-200"></i>
-                </a>
+        <div class="border-[5px] border-black dark:border-yellow-600 bg-white dark:bg-[#1a1a1a] mb-12 relative shadow-brutal-lg dark:shadow-brutal-yellow-lg overflow-hidden">
+            <div class="grid md:grid-cols-[300px_1fr] gap-0">
+                <div class="border-black dark:border-yellow-600 p-6 flex items-center justify-center">
+                    <img src="src/img/websiteCreationPhoto.jpg" alt="Website" class="w-full h-auto">
+                </div>
+                <div class="p-12">
+                    <h3 class="text-3xl font-bold mb-4 uppercase text-yellow-600 dark:text-white">This Portfolio Website</h3>
+                    <p class="text-lg leading-relaxed mb-6">I built this website as a portfolio. It organizes my professional work and personal story into an easy-to-navigate interface. The goal was to create a platform that presents my projects and reflects who I am beyond my technical skills. It's a digital snapshot of me: what I build, what I enjoy, and where I'm heading.</p>
+                    <a href="https://choihann.github.io/Portfolio/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-yellow-600 text-white border-[3px] border-black dark:border-white no-underline font-bold uppercase transition-all shadow-brutal dark:shadow-brutal-yellow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none">
+                        View Project <i class="fa-solid fa-external-link"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-    
-    <footer class="text-gray-700 dark:text-gray-100 text-center py-4 mt-10">
-        <p class="text-sm">
-          &copy; <span id="year"></span> Hanna Choi. All rights reserved.
-        </p>
-      </footer>
+
+    <footer class="text-center py-8 border-t-4 border-black dark:border-yellow-600 font-bold">
+        <p>&copy; <span id="year"></span> Hanna Choi. All rights reserved.</p>
+    </footer>
 
     <script src="index.js"></script>
 </body>

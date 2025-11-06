@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Work Sans", sans-serif;
+    --font-sans: "Space Grotesk", sans-serif;
+
+    --shadow-brutal: 6px 6px 0 #000;
+    --shadow-brutal-lg: 10px 10px 0 #000;
+    --shadow-brutal-yellow: 6px 6px 0 #a65f00;
+    --shadow-brutal-yellow-lg: 10px 10px 0 #a65f00;
+    --shadow-brutal-white: 6px 6px 0 #f5f5f4;
+    --shadow-brutal-white-lg: 10px 10px 0 #f5f5f4;
 }
 
 /* 

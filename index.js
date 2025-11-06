@@ -39,37 +39,27 @@ document.addEventListener('click', function(event) {
 
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
-const toggleCircle = document.querySelector('.toggle-circle');
 const html = document.documentElement;
 
-// load whichever theme was saved
-if (localStorage.getItem('theme') === 'dark') {
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
     html.classList.add('dark');
-    themeIcon.classList.add('fa-moon', 'text-slate-600');
-} else {
-    html.classList.remove('dark');
-    themeIcon.classList.add('fa-sun', 'text-amber-500');
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
 }
 
-themeToggle.addEventListener('click', function() {
+themeToggle.addEventListener('click', () => {
+    html.classList.toggle('dark');
     const isDark = html.classList.contains('dark');
-
+    
     if (isDark) {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-
-        setTimeout(() => {
-            themeIcon.classList.remove('fa-moon', 'text-slate-600');
-            themeIcon.classList.add('fa-sun', 'text-amber-500');
-        }, 200);
-    } else {
-        html.classList.add('dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
         localStorage.setItem('theme', 'dark');
-
-        setTimeout(() => {
-            themeIcon.classList.remove('fa-sun', 'text-amber-500');
-            themeIcon.classList.add('fa-moon', 'text-slate-600');
-        }, 200);
+    } else {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'light');
     }
 });
 
